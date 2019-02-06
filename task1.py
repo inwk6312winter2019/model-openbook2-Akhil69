@@ -5,8 +5,10 @@ def list_tuple():
 		res=(line[2],line[4],line[6],line[7])
 		print(res)
 list_tuple()
+
 '''Here getting the result as a dictonary
  were key as maintainence and values no.of streets.'''
+
 def maintain_hist(): 
 	hist_type = dict()
 	for line in file:
@@ -20,6 +22,7 @@ def maintain_hist():
 maintain_hist()
 
 #Unique owners list
+
 def owners():
 	lst=[]
 	for line in file:
@@ -32,6 +35,7 @@ def owners():
 owners()
 
 # street list and classes
+
 def Street():
 	ls_street=[]
 	for line in file:
