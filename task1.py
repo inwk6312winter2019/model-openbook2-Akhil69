@@ -5,11 +5,10 @@ def list_tuple():
 		res=(line[2],line[4],line[6],line[7])
 		print(res)
 list_tuple()
-
 '''Here getting the result as a dictonary
  were key as maintainence and values no.of streets.'''
-
-def maintain_hist(): 
+def maintain_hist():
+	file = open("Street_Centrelines.csv","r") 
 	hist_type = dict()
 	for line in file:
 		line=line.split(',')
@@ -20,10 +19,10 @@ def maintain_hist():
 			hist_type[res]+=1
 	print(hist_type)
 maintain_hist()
-
 #Unique owners list
 
 def owners():
+	file = open("Street_Centrelines.csv","r")
 	lst=[]
 	for line in file:
 		line=line.split(',')
@@ -31,12 +30,13 @@ def owners():
 		if res not in lst:
 			lst.append(res)
 	print(lst)
-
 owners()
+
 
 # street list and classes
 
 def Street():
+	file = open("Street_Centrelines.csv","r")
 	ls_street=[]
 	for line in file:
 		line=line.split(',')
@@ -45,4 +45,5 @@ def Street():
 			ls_street.append(res)
 	print(ls_street)
 	
+
 Street()
