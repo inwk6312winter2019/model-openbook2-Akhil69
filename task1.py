@@ -1,12 +1,14 @@
 file = open("Street_Centrelines.csv","r")
-def list_tuple():
+def list_tuple(): #here we get tuple names
 	for line in file:
 		line=line.split(',')
 		res=(line[2],line[4],line[6],line[7])
 		print(res)
 list_tuple()
+
 '''Here getting the result as a dictonary
  were key as maintainence and values no.of streets.'''
+
 def maintain_hist():
 	file = open("Street_Centrelines.csv","r") 
 	hist_type = dict()
@@ -19,6 +21,7 @@ def maintain_hist():
 			hist_type[res]+=1
 	print(hist_type)
 maintain_hist()
+
 #Unique owners list
 
 def owners():
